@@ -1,0 +1,14 @@
+<div>
+  <div class="user">
+    <span class="name">{{ user.name }}</span>
+    <span *ngIf="!isAdmin" class="credits"> {{ user.credits }}</span>
+
+
+    <span *ngIf="isAdmin" class="credits"><input type="number" [(ngModel)]="user.credits"/>
+      <button *ngIf="isAdmin" (click)="updateCredits()"><i class="fa fa-check"></i></button>
+    </span>
+
+  </div>
+</div>
+
+

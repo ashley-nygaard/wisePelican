@@ -2,9 +2,25 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.7.
 
-## Development server
 
+## Overview
+A simple application that connects to an Airtable datasource. 
+I chose Airtable because it was a small application that was easy to see data flowing back and forth. Also because I had never used it and wanted to try a new tool.
+There is no needed setup in the environment unless you would like to replace the airtable datatable. 
+The project has an interceptor that at a later date should be updated to use an oAuth configuration and instead of the PAT. 
+Error handling has been included to alert the users when an error occurs. 
+There is no Retool admin panel. I decided to create the admin panel inside the Angular UI. 
+There is a search filter that allows you to search by name. If you get no results, simply click 'Clear' and all the users will return. 
+
+
+
+## Development server
+ Install app dependencies:
+```bash
+npm install
+```
 To start a local development server, run:
+
 
 ```bash
 ng serve
@@ -35,25 +51,3 @@ ng build
 ```
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

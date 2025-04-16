@@ -1,0 +1,29 @@
+<section class="header">
+    <span class="inputs">
+      <input id="search-input" type="text" placeholder="Filter by User" #filter
+             name="filterUserSearch"/>
+    <button class="primary" type="button" (click)="filterUsers(filter.value)">Search</button>
+    <button class="secondary" type="button" (click)="clearSearch(filter)">Clear</button>
+  </span>
+
+  <span class="inputs">
+      Are you an Admin? <input type="checkbox" (change)="isAdminSelect($event)"/>
+    </span>
+</section>
+<div id="no-results" *ngIf="filteredUserList.length == 0"> No user(s) was found.</div>
+
+
+<section class="results" *ngIf="filteredUserList.length > 0">
+  <div class="list-header">
+    <h3 class="name">User</h3>
+    <h3 class="credits">Credits</h3>
+  </div>
+  <div *ngIf="filteredUserList.length == 0"> No user(s) was found.</div>
+
+  <app-list-view [user]="user"
+                 *ngFor="let user of filteredUserList"
+                 (creditsUpdated)="onCreditsUpdated(user.id, $event)"
+                 [isAdmin]="isAdmin"
+  ></app-list-view>
+
+</section>
