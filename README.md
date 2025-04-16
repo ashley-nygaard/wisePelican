@@ -19,6 +19,9 @@ A simple application that connects to an Airtable datasource.
 ```bash
 npm install
 ```
+
+Update the environment files with the required variable. 
+
 To start a local development server, run:
 
 
