@@ -6,7 +6,7 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 ## Overview
 A simple application that connects to an Airtable datasource. 
 I chose Airtable because it was a small application that was easy to see data flowing back and forth. Also because I had never used it and wanted to try a new tool.
-There is no needed setup in the environment unless you would like to replace the airtable datatable. 
+For the setup - I will send you the PAT and tableName in order to update in the environment.config files. This is necessary so it is not public. 
 The project has an interceptor that at a later date should be updated to use an oAuth configuration and instead of the PAT. 
 Error handling has been included to alert the users when an error occurs. 
 There is no Retool admin panel. I decided to create the admin panel inside the Angular UI. 
